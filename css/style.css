@@ -8,8 +8,15 @@ img{
     max-width: 100%;
 }
 
+/* Regola reset lista */
 ul{
     list-style-type: none;
+}
+
+/* Regola reset link */
+a{
+    text-decoration: none;
+    color: currentColor;
 }
 
 .container{
@@ -73,6 +80,7 @@ ul{
     min-height: 300px;
     background-color: black;
     padding: 20px;
+    color: white;
 }
 
 .debug .container, .container-section{
@@ -108,7 +116,7 @@ ul{
 } */
 
 .debug [class^="col"]{
-    border: 1px solid black;
+    border: 1px solid white;
     padding: 5px 15px;
 }
 
@@ -142,12 +150,12 @@ ul{
 /* Altezza colonne Section in Footer */
 .debug .row-col-6 > [class^="col"]{
     min-height: 300px;
-    background-color: azure;
+    /* background-color: azure; */
 }
 
-.debug .row-col-6 > .col-double{
+/* .debug .row-col-6 > .col-double{
     background-color: papayawhip;
-}
+} */
 
 .debug .row.between{
     background-color: cadetblue;
@@ -239,9 +247,26 @@ ul{
 
 /* FOOTER */
 
-.row.between{
-    justify-content: space-between;
-    padding: 20px 0;
+.list-footer > li{
+    padding: 10px 0;
+}
+
+.list-footer > .list-title{
+    color: steelblue;
+    font-weight: bold;
+}
+
+.list-footer > .list-title.leng{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.lenguage > .flag-ita{
+    width: 20px;
+}
+
+.list-footer > .lenguage::after{
+    content: '\1F893';
 }
 
 /* Larghezza colonne Section in Footer */
@@ -252,4 +277,9 @@ ul{
 /* Larghezza colonne Section in Footer */
 .row-col-6 > .col-double{
     flex-basis: calc((100% / 6) * 2);
+}
+
+.row.between{
+    justify-content: space-between;
+    padding: 20px 0;
 }
