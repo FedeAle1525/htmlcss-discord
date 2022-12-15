@@ -29,7 +29,7 @@ ul{
 /* DEBUG */
 
 .debug .main-header{
-    background-color: aqua;
+    background-color: blue;
     padding: 20px;
 }
 
@@ -69,7 +69,7 @@ ul{
 }
 
 .debug .section.blue{
-    background-color: blue;
+    background-color: aqua;
 }
 
 /* .debug .row{
@@ -83,7 +83,7 @@ ul{
 }
 
 .debug .row-col-4 > [class^="col"]{
-    background-color: orange;
+    background-color: blue;
 }
 
 /* .debug .section-header{
