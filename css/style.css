@@ -8,6 +8,10 @@ img{
     max-width: 100%;
 }
 
+ul{
+    list-style-type: none;
+}
+
 .container{
     max-width: 900px;
     margin: 0 auto;
@@ -139,6 +143,20 @@ img{
 .row-col-4 > .col50{
     flex-grow: 1;
 } 
+
+.menu{
+    color: white;
+}
+
+.col50 > .menu li{
+    display: inline;
+}
+
+.col > .login{
+    padding: 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+}
 
 
 /* MAIN */
