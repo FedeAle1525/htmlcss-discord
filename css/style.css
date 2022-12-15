@@ -29,6 +29,10 @@ a{
     margin: 0 auto;
 }
 
+.col > .logo{
+    width: 100px;
+}
+
 .row{
     display: flex;
 }
@@ -157,13 +161,13 @@ a{
     background-color: papayawhip;
 } */
 
-.debug .row.between{
+/* .debug .row.between{
     background-color: cadetblue;
-}
+} */
 
-.debug .between > [class^="col"]{
+/* .debug .between > [class^="col"]{
     background-color: peachpuff;
-}
+} */
 
 /* HEADER */
 
@@ -240,7 +244,8 @@ a{
     text-align: center;
 }
 
-.row-button > .button.mac{
+.row-button > .button.mac,
+.row.between .button.reg{
     background-color: lightseagreen;
     color: white;
 }
@@ -282,4 +287,5 @@ a{
 .row.between{
     justify-content: space-between;
     padding: 20px 0;
+    align-items: center;
 }
