@@ -19,6 +19,10 @@ a{
     color: currentColor;
 }
 
+.section{
+    padding: 20px;
+}
+
 .container{
     max-width: 900px;
     margin: 0 auto;
@@ -69,64 +73,31 @@ a{
 
 /* DEBUG */
 
-.debug .main-header{
-    background-color: blue;
-    padding: 20px;
-}
-
 /* .debug .main-content{
     min-height: 600px;
     background-color: gray;
     padding: 20px;
 } */
 
-.debug .page-footer{
-    min-height: 300px;
-    background-color: black;
-    padding: 20px;
-    color: white;
-}
-
-.debug .container, .container-section{
+/* .debug .container, .container-section{
     border: 3px dashed red;
     padding: 20px;
-}
+} */
 
 /* .debug .container-section{
     min-height: 500px;
 } */
 
-.debug .section{
-    padding: 20px;
-}
-
-.debug .section.white{
-    background-color: white;
-    padding: 20px 0;
-}
-
-.debug .section.gray{
-    background-color: lightgray;
-    padding: 20px 0;
-}
-
-.debug .section.blue{
-    background-color: aqua;
-}
 
 /* .debug .row{
     border: 2px dotted blue;
     padding: 20px;
 } */
 
-.debug [class^="col"]{
+/* .debug [class^="col"]{
     border: 1px solid white;
     padding: 5px 15px;
-}
-
-.debug .row-col-4 > [class^="col"]{
-    background-color: blue;
-}
+} */
 
 /* .debug .section-header{
     min-height: 200px;
@@ -152,10 +123,10 @@ a{
 
 
 /* Altezza colonne Section in Footer */
-.debug .row-col-6 > [class^="col"]{
+/* .debug .row-col-6 > [class^="col"]{
     min-height: 300px;
-    /* background-color: azure; */
-}
+    background-color: azure;
+} */
 
 /* .debug .row-col-6 > .col-double{
     background-color: papayawhip;
@@ -169,11 +140,26 @@ a{
     background-color: peachpuff;
 } */
 
+
+
 /* HEADER */
 
 /* .main-header .row{
      justify-content: space-between;
 } */
+
+.main-header{
+    background-color: blue;
+    padding: 20px;
+}
+
+.row-col-4 > [class^="col"]{
+    background-color: blue;
+}
+
+.row.row-col-4{
+    align-items: center;
+}
 
 /* Non è ottimale usare la larghezza fissa perchè il menù potrebbe variare larghezza in futuro */
 /* Larghezza colonne Nav in Header */
@@ -221,6 +207,16 @@ a{
     font-size: 30px;
 }
 
+.section.white{
+    background-color: white;
+    padding: 20px 0;
+}
+
+.section.gray{
+    background-color: lightgray;
+    padding: 20px 0;
+}
+
 .row.reverse{
     flex-direction: row-reverse;
 }
@@ -252,6 +248,12 @@ a{
 
 /* FOOTER */
 
+.page-footer{
+    background-color: black;
+    /* padding: 20px; */
+    color: white;
+}
+
 .list-footer > li{
     padding: 10px 0;
 }
@@ -282,6 +284,7 @@ a{
 /* Larghezza colonne Section in Footer */
 .row-col-6 > .col-double{
     flex-basis: calc((100% / 6) * 2);
+    padding: 0 20px;
 }
 
 .row.between{
