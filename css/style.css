@@ -204,12 +204,21 @@ ul{
 
 .row > .col.img{
     /* Si poteva usare usare 60% */
-    flex-basis: 450px;
+    flex-basis: 60%;
 }
 
 .row > .col.text{
     /* Si poteva usare 40% */
-    flex-grow: 1;
+    flex-basis: 40%;
+    text-align: left;
+}
+
+.col.text > div[class^="row"]{
+    padding: 10px 0;
+}
+
+.row-title > h2{
+    font-size: 35px;
 }
 
 .row.row100 > .col{
