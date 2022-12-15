@@ -26,6 +26,12 @@ ul{
     display: flex;
 }
 
+.button{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+}
+
 /* DEBUG */
 
 .debug .main-header{
@@ -50,9 +56,9 @@ ul{
     padding: 20px;
 }
 
-.debug .container-section{
+/* .debug .container-section{
     min-height: 500px;
-}
+} */
 
 .debug .section{
     padding: 20px;
@@ -152,14 +158,45 @@ ul{
     display: inline;
 }
 
-.col > .login{
-    padding: 5px 10px;
-    border-radius: 10px;
+.col > .button.login{
     background-color: white;
 }
 
 
 /* MAIN */
+
+.hero{
+    background-image: url(../img/jumbo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 400px;
+}
+
+.hero > .container-section{
+    text-align: center;
+    color: white;
+}
+
+.hero div[class^="hero"]{
+    padding: 10px 0;
+}
+
+.hero-title h2{
+    font-size: 35px;
+}
+
+.hero-buttons .mac{
+    background-color: white;
+} 
+
+.hero-buttons .mac::before{
+    content: '\1F817';
+}
+
+.hero-buttons .browser{
+    background-color: black;
+    color: white;
+}
 
 .row.reverse{
     flex-direction: row-reverse;
