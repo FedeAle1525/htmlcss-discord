@@ -48,14 +48,20 @@ a{
 
 /* Regola generalizzata per avere spazio tra elementi di una colonna */
 .col > div[class^="row"]{
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 /* Regole generalizzata per stile bottoni */
 .button{
-    padding: 5px 10px;
-    border-radius: 10px;
+    padding: 0px 15px;
+    line-height: 35px;
+    /* Dare un valore alto per avere elementi a "pillola" per un contenuto ampio */
+    border-radius: 999px;
     border: none;
+    /* Regole se all'interno dei bottoni abbiamo più elementi */
+    display: flex;
+    gap: 8px;
+    align-items: center;
 }
 
 .button.mac{
@@ -144,13 +150,13 @@ a{
 
 /* HEADER */
 
-/* .main-header .row{
+.main-header .row{
      justify-content: space-between;
-} */
+}
 
 .main-header{
     background-color: blue;
-    padding: 20px;
+    padding: 20px 0;
 }
 
 .row-col-4 > [class^="col"]{
@@ -163,22 +169,32 @@ a{
 
 /* Non è ottimale usare la larghezza fissa perchè il menù potrebbe variare larghezza in futuro */
 /* Larghezza colonne Nav in Header */
-.row-col-4 > .col{
+/* .row-col-4 > .col{
     flex-basis: calc(100% / 4);
-}
+} */
 
 /* Larghezza colonne Nav in Header  */
-.row-col-4 > .col50{
+/* .row-col-4 > .col50{
     flex-grow: 1;
-} 
+}  */
 
+/* Utilizzo il flex per allineare i link essendo colonna di row */
 .menu{
     color: white;
+    /* display: flex; */
 }
+
+/* Lavoro direttamente sui link pr aumentare l'area cliccabile */
+/* .menu a {
+    padding: 0 15px;
+    line-height: 34px;
+    display: block;
+} */
 
 .col50 > .menu li{
     display: inline;
-}
+    padding: 0 15px;
+} 
 
 .col > .button.login{
     background-color: white;
@@ -190,8 +206,10 @@ a{
 .hero{
     background-image: url(../img/jumbo.png);
     background-size: cover;
+    background-position: center bottom;
     background-repeat: no-repeat;
     min-height: 400px;
+    padding: 80px 0;
 }
 
 .hero > .container-section{
@@ -205,6 +223,14 @@ a{
 
 .hero-title{
     font-size: 30px;
+}
+
+/* Avendo trasformato i button in elementi flex, devo lavorare sul padre per gestire allineamenti */
+.hero-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 }
 
 .section.white{
@@ -232,6 +258,12 @@ a{
     text-align: left;
 }
 
+/* Serve per dare allineare testo a immagine */
+/* A causa della specificità questa regola non funziona */
+/* .row-title{
+    padding-top: 20px;
+} */
+
 .row.row100 > .col{
     flex-basis: 100%;
 }
@@ -246,6 +278,16 @@ a{
     color: white;
 }
 
+.row-subtitle{
+    background-image: url(../img/stars.svg);
+}
+
+/* Avendo reso button elemento flex devo gestire anche il padre come tale */
+.row-button{
+    display: flex;
+    justify-content: center;
+}
+
 /* FOOTER */
 
 .page-footer{
@@ -254,8 +296,17 @@ a{
     color: white;
 }
 
-.list-footer > li{
-    padding: 10px 0;
+/* Bordo sopra la parte finale del footer */
+/* In alternativa si poteva fare con "before" o "after" */
+.section > .container.border{
+    border-top: 1px solid gray;
+    padding-top: 10px;
+}
+
+.list-footer a{
+    display: block;
+    line-height: 30px;
+    /* padding: 10px 0; */
 }
 
 .list-footer > .list-title{
@@ -292,3 +343,17 @@ a{
     padding: 20px 0;
     align-items: center;
 }
+
+/* select{
+    Regole di reset
+    background-color: transparent;
+    border: 0;
+    color: currentColor;
+    font-size: 1rem;
+    Col padding left allontano bandiera da scritta
+    padding: 0 5px 0 30px;
+    Trucco per aggiungere la bandierina
+    background-image: url(../img/ita.png);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+} */

@@ -17,16 +17,17 @@
 
                 <!-- Logo -->
                 <div class="col">
+                    <!-- Di solito nei siti il logo è un link all'homepage quindi viene inserito in un link <a> -->
                     <img class="logo" src="./img/logo.svg" alt="logo discord">
                 </div>
                 <!-- Menù: lista con 5 elementi -->
                 <nav class="col50">
                     <ul class="menu">
-                        <li>Scarica</li>
-                        <li>Perchè Disco</li>
-                        <li>Nitro</li>
-                        <li>Sicurezza</li>
-                        <li>Assistenza</li>
+                        <li><a href="">Scarica</a></li>
+                        <li><a href="">Perchè Disco</a></li>
+                        <li><a href="">Nitro</a></li>
+                        <li><a href="">Sicurezza</a></li>
+                        <li><a href="">Assistenza</a></li>
                     </ul>
                 </nav>
                 <!-- Bottone "Accedi" -->
@@ -55,6 +56,7 @@
                             </p>
                         </div>
                         <div class="hero-buttons">
+                            <!-- Si potevano usare le classi link <a> al posto dei button -->
                             <button class="button mac"> Scarica per Mac</button>
                             <button class="button browser">Apri Discord nel tuo Browser</button>
                         </div>
@@ -180,15 +182,26 @@
                         <!-- Lista Lingua e Social -->
                         <ul class="list-footer">
                             <li class="list-title leng">Il tuo posto per parlare</li>
+                            <!-- Si poteva usare una "select" per crare il menù a tendina -->
+                            <!-- <li><select name="lenguage" id="lenguage">
+                                <option value="ita">Italiano</option>
+                                </select>
+                            </li> -->
                             <li class="lenguage">
                                 <img class="flag-ita" src="./img/ita.png" alt="italian flag"> 
                                 Italiano 
                             </li>
+                            <!-- Creare lista a parte da mettere in orizzontale per icone social
+                            <li><a href="">T</a></li>
+                            <li><a href="">I</a></li>
+                            <li><a href="">F</a></li>
+                            <li><a href="">Y</a></li> -->
                         </ul>
                     </div>
                     <!-- Prima Lista Link -->
                     <div class="col">
                         <ul class="list-footer">
+                            <!-- IL primo elemento della lista poteva essere considerato un titolo -->
                             <li class="list-title"><a href="">Prodotto</a></li>
                             <li><a href="">Scarica</a></li>
                             <li><a href="">Perchè Discord</a></li>
@@ -241,7 +254,7 @@
 
         <!-- Sezione 2 del Footer con Logo + Bottone -->
         <section class="section">
-            <div class="container">
+            <div class="container border">
                 <div class="row between">
                     <div class="col">
                         <img class="logo" src="./img/logo.svg" alt="logo discord">
